@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom"
 import styled from "styled-components"
 
-const Navi = styled.header`
+const Navi = styled.nav`
 
     background-color: #333;
     box-shadow: inset 0 0 10px 10px gray;
@@ -16,9 +15,14 @@ const Navi = styled.header`
 const Nav = () => {
   return (
     <Navi>
-        <Link>example</Link>
+      <form>
+        <label>Search:</label>
+        <input />
+      </form>
     </Navi>
   );
 };
+
+
 
 export default Nav;
