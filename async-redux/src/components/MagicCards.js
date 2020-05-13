@@ -1,16 +1,26 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchMagicCards } from "../actions/cardActions";
+import styled from "styled-components"
+
+const Container = styled.div`
+
+background-color: #333;
+    box-shadow: inset 0 0 10px 10px gray;
+    padding: 1rem;
+    color: lightgray;
+    text-shadow: 0 0 10px goldenrod;
+
+`
+
 
 const MagicCards = (props) => {
   useEffect(() => {
     props.fetchMagicCards();
   }, []);
   return (
-    <div className="cardContainer">
-      <header>
-        <h1>Magic Cards</h1>
-      </header>
+    <Container>
+      
       {props.isFetching && <div>fetching cards...</div>}
       {props.data &&
         props.data.map((card) => {
@@ -21,7 +31,7 @@ const MagicCards = (props) => {
             </div>
           );
         })}
-    </div>
+    </Container>
   );
 };
 
