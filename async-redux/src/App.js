@@ -1,14 +1,12 @@
 import React from 'react';
-
+import MagicCards from "./components/MagicCards"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1> MTG Cards </h1>
-      </header>
-
+     
+      <MagicCards />
     </div>
   );
 }

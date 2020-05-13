@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from "redux"
 import  { Provider } from "react-redux"
-import thunk from 
+import thunk from "redux-thunk"
+import logger from "redux-logger"
 import { mtgReducer } from "./reducers/mtgReducer"
 
 import './index.css';
