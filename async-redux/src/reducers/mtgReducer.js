@@ -1,4 +1,4 @@
-import { INITIAL_CARD_FETCH } from "../actions/cardActions"
+import { INITIAL_CARD_FETCH, CARD_FETCH_SUCCESS } from "../actions/cardActions"
 
 const initialState = {
     isFetching: false,
@@ -13,6 +13,12 @@ export const mtgReducer = (state = initialState, action) => {
                 ...state,
                 isFetching: true
             }
+            case CARD_FETCH_SUCCESS:
+                return {
+                    ...state,
+                    isFetching: false,
+                    data: action.payload
+                }
         default:
             return state
     }
