@@ -10,9 +10,23 @@ background-color: #333;
     padding: 1rem;
     color: lightgray;
     text-shadow: 0 0 10px goldenrod;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
 
 `
+const CardImage =styled.img`
 
+border-radius: 1rem;
+height: 20rem;
+box-shadow: ;
+
+`
+const Card = styled.div`
+
+width: 20%;
+
+`
 
 const MagicCards = (props) => {
   useEffect(() => {
@@ -26,8 +40,7 @@ const MagicCards = (props) => {
         props.data.map((card) => {
           return (
             <div>
-              <h2>{card.name}</h2>
-              <img src={card.image_uris.normal} />
+              <CardImage src={card.image_uris.normal} />
             </div>
           );
         })}

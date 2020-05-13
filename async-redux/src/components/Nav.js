@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 const Navi = styled.header`
@@ -15,7 +16,7 @@ const Navi = styled.header`
 const Nav = () => {
   return (
     <Navi>
-        <a>example</a>
+        <Link>example</Link>
     </Navi>
   );
 };
