@@ -20,6 +20,7 @@ const CardImage = styled.img`
 `;
 const Card = styled.div`
   width: 20%;
+  margin: 1%;
 `;
 
 const MagicCards = (props) => {
@@ -32,9 +33,9 @@ const MagicCards = (props) => {
       {props.cards &&
         props.cards.map((card) => {
           return (
-            <div>
+            <Card>
               <CardImage src={card.image_uris.normal} />
-            </div>
+            </Card>
           );
         })}
     </Container>
