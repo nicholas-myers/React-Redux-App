@@ -7,17 +7,21 @@ const MagicCards = (props) => {
         props.fetchMagicCards()
     }, [])
     return (
-        <header> 
-            <h1>Magic Cards</h1>
-        </header>
-
+        <div className="cardContainer">
+            <header> 
+                <h1>Magic Cards</h1>
+            </header>
+            {props.isFetching && <div>fetching cards...</div>}
+        </div>
     )
 } 
 
 const mapStateToProps = state => {
     console.log(state)
     return {
-
+        isFetching: state.isFetching,
+        data: state.data,
+        error: state.error
     }
 }
 
